@@ -18,10 +18,10 @@ const Navbar = ({ setIsDark, isDark }) => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+    // const newTheme = !isDark;
+    setIsDark(!isDark);
+    // document.documentElement.classList.toggle('dark', newTheme);
+    // localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
   const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
@@ -51,7 +51,7 @@ const Navbar = ({ setIsDark, isDark }) => {
             >
               <div className="flex items-center">
                 <FilePen className="h-8 w-8 text-orange-600 dark:text-orange-400" />
-                <span className="ml-2 text-xl font-bold text-orange-800 dark:text-orange-100">काव्यालय</span>
+                <span className="ml-2 text-xl font-bold text-orange-800 dark:text-orange-100">काव्यपथ</span>
               </div>
             </motion.div>
             <div className="hidden md:block">
