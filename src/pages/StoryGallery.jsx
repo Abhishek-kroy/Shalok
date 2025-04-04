@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const sampleStories = [
   {
     id: 1,
-    title: "प्रेम की अनंत यात्रा",
+    title: "प्रेम  fhawhvadgn की अनंत यात्रा",
     author: "अमित शर्मा",
     genre: "प्रेम",
     content: "यह कहानी दो प्रेमियों की है जो जीवन के हर मोड़ पर एक-दूसरे का साथ देते हैं। उनका प्रेम कठिनाइयों पर विजय पाता है...",
@@ -79,16 +79,22 @@ const genreColorsDark = {
 };
 
 // Function to initialize and save stories to localStorage
-const initializeAndSaveStories = () => {
-  const storedStories = localStorage.getItem('stories');
+// const initializeAndSaveStories = () => {
+//   const storedStories = localStorage.getItem('stories');
   
-  if (!storedStories) {
-    localStorage.setItem('stories', JSON.stringify(sampleStories));
-    return sampleStories;
-  } else {
-    return JSON.parse(storedStories);
-  }
+//   if (!storedStories) {
+//     localStorage.setItem('stories', JSON.stringify(sampleStories));
+//     return sampleStories;
+//   } else {
+//     return JSON.parse(storedStories);
+//   }
+// };
+
+const initializeStoriesHardcoded = () => {
+  localStorage.setItem('stories', JSON.stringify(sampleStories));
+  return sampleStories;
 };
+
 
 const StoryGallery = ({ isDark, setIsDark }) => {
   const [stories, setStories] = useState([]);
@@ -96,8 +102,8 @@ const StoryGallery = ({ isDark, setIsDark }) => {
   const [selectedGenre, setSelectedGenre] = useState('');
   
   useEffect(() => {
-    const loadedStories = initializeAndSaveStories();
-    setStories(loadedStories);
+    // const loadedStories = initializeAndSaveStories();
+    setStories(sampleStories);
   }, []);
   
   useEffect(() => {
@@ -157,10 +163,16 @@ const StoryGallery = ({ isDark, setIsDark }) => {
     noResults: isDark ? "bg-gray-800/40 border-gray-700/50" : "bg-white/40 border-white/50"
   };
 
+  // useEffect(() => {
+  //   localStorage.setItem("stories", JSON.stringify(sampleStories));
+  // }
+  // , []);
   useEffect(() => {
-    localStorage.setItem("stories", JSON.stringify(sampleStories));
-  }
-  , []);
+    const loadedStories = initializeStoriesHardcoded();
+    setStories(loadedStories);
+  }, []);
+  
+
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${isDark ? 'text-white' : 'text-gray-800'}`}
          style={{
