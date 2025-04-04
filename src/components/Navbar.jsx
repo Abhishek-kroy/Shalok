@@ -28,7 +28,7 @@ const Navbar = ({ setIsDark, isDark }) => {
 
   const navigationItems = [
     { name: 'होम', href: '/', icon: Home },
-    { name: 'कविताएं', href: '/Kavita', icon: Book },
+    { name: 'कविताएं', href: '/kavita', icon: Book },
     { name: 'लेखक', href: '/texteditor', icon: FilePen },
   ];
 

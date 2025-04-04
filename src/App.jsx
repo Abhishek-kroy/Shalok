@@ -16,7 +16,7 @@ function App() {
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Routes>
         <Route path="/" element={<HomePage isDark={isDark} setIsDark={setIsDark} />} />
-        <Route path="/Kavita" element={<StoryGallery isDark={isDark} setIsDark={setIsDark} />} />
+        <Route path="/kavita" element={<StoryGallery isDark={isDark} setIsDark={setIsDark} />} />
         <Route path="/texteditor" element={<HindiPoemEditor isDark={isDark} setIsDark={setIsDark} />} />
         <Route path="/myProfile" element={<MyProfile isDark={isDark} setIsDark={setIsDark} />} />
         <Route path="/story/:id" element={<StoryView isDark={isDark} setIsDark={setIsDark} />} />

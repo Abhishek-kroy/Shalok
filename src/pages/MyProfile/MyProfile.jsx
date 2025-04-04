@@ -198,18 +198,6 @@ const ProfileHeader = ({ data, onEdit, darkMode, onToggleDarkMode,isDark,setIsDa
       }}
     >
       <Box sx={{ position: 'absolute', right: 16, top: 16, display: 'flex', gap: 1, alignItems: 'center' }}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={darkMode}
-              onChange={onToggleDarkMode}
-              icon={<Sun size={20} />}
-              checkedIcon={<Moon size={20} />}
-              color="primary"
-            />
-          }
-          label={darkMode ? "डार्क मोड" : "लाइट मोड"}
-        />
         <IconButton 
           onClick={() => setIsEditing(true)}
           sx={{ 
