@@ -220,7 +220,7 @@ function HomePage({isDark,setIsDark}) {
               whileTap={{ scale: 0.95 }}
               className="rounded-md shadow-sm"
             >
-              <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-orange-500 hover:bg-orange-600 md:py-4 md:text-lg md:px-10 transition-all duration-300">
+              <a href="/texteditor" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-orange-500 hover:bg-orange-600 md:py-4 md:text-lg md:px-10 transition-all duration-300">
                 <Pen className="h-5 w-5 mr-2" />
                 लिखना शुरू करें
               </a>
@@ -230,7 +230,7 @@ function HomePage({isDark,setIsDark}) {
               whileTap={{ scale: 0.95 }}
               className="mt-3 sm:mt-0"
             >
-              <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-orange-200 text-base font-medium rounded-full text-orange-700 bg-white hover:bg-orange-50 md:py-4 md:text-lg md:px-10 transition-all duration-300">
+              <a href="/kavita" className="w-full flex items-center justify-center px-8 py-3 border border-orange-200 text-base font-medium rounded-full text-orange-700 bg-white hover:bg-orange-50 md:py-4 md:text-lg md:px-10 transition-all duration-300">
                 <Book className="h-5 w-5 mr-2" />
                 कविताएं ब्राउज़ करें
               </a>
